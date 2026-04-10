@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>byteonix</title>
+    <script>
+      (() => {
+        const storageKey = 'byteonix-theme'
+        const stored = localStorage.getItem(storageKey)
+        const preference = stored === 'light' || stored === 'dark' || stored === 'system'
+          ? stored
+          : 'system'
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        const resolved = preference === 'system' ? (systemDark ? 'dark' : 'light') : preference
+        document.documentElement.classList.toggle('dark', resolved === 'dark')
+        document.documentElement.setAttribute('data-theme', resolved)
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
