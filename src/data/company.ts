@@ -60,7 +60,7 @@ export const company = {
   email: 'Suraj27singh2003@gmail.com',
   phone: '+91 78058 29124',
   location: 'bangalore ,India',
-  address: 'Bizzhub workspace, nagavara near manayta tech park Bengaluru',
+  address: 'Blueberry Appartment Near Nagawara Bridge, Thanisandra Main Road, HBR Layout 5th Block, Bangalore.',
 }
 
 export const trustIndustries = ['SaaS', 'FinTech', 'E-commerce', 'Healthcare', 'Enterprise']
