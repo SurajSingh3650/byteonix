@@ -57,19 +57,13 @@ export type ProcessStep = {
 export const company = {
   name: 'Byteonix',
   tagline: 'Your Trusted Technology Partner',
-  email: 'hello@byteonix.com',
-  phone: '+91 98765 43210',
-  location: 'Salt Lake, Kolkata, India',
-  address: '7th Floor, Tech Square, Sector V, Kolkata 700091',
+  email: 'Suraj27singh2003@gmail.com',
+  phone: '+91 78058 29124',
+  location: 'bangalore ,India',
+  address: 'Bizzhub workspace, nagavara near manayta tech park Bengaluru',
 }
 
-export const clientLogos = [
-  'NEXORA',
-  'FINPULSE',
-  'MEDLAYER',
-  'SHOPGRID',
-  'EDVANTA',
-]
+export const trustIndustries = ['SaaS', 'FinTech', 'E-commerce', 'Healthcare', 'Enterprise']
 
 export const services: Service[] = [
   {
@@ -78,7 +72,7 @@ export const services: Service[] = [
       'Conversion-focused websites and enterprise web platforms that help brands launch faster and grow with confidence.',
     technologies: ['React', 'Next.js', 'Tailwind', 'Node.js'],
     industryUseCase: 'Ideal for SaaS, B2B, and digital-first brands needing high-performing web experiences.',
-    cta: 'Discuss web platform',
+    cta: 'Explore Service',
     icon: 'web',
   },
   {
@@ -87,7 +81,7 @@ export const services: Service[] = [
       'Reliable mobile and cross-platform apps designed to improve customer experience, retention, and product adoption.',
     technologies: ['React Native', 'Flutter', 'TypeScript', 'Firebase'],
     industryUseCase: 'Best for startups and enterprises launching customer apps, partner tools, or internal mobile workflows.',
-    cta: 'Plan your app',
+    cta: 'Start a Project',
     icon: 'app',
   },
   {
@@ -96,7 +90,7 @@ export const services: Service[] = [
       'Cloud-ready infrastructure and DevOps systems built for speed, resilience, and secure long-term scalability.',
     technologies: ['AWS', 'Azure', 'Docker', 'CI/CD'],
     industryUseCase: 'Built for platforms handling growth, traffic spikes, multi-team deployments, and compliance-sensitive workloads.',
-    cta: 'Modernize infrastructure',
+    cta: 'Explore Service',
     icon: 'cloud',
   },
   {
@@ -105,7 +99,7 @@ export const services: Service[] = [
       'Tailored software systems that streamline operations, unify data, and unlock measurable efficiency across teams.',
     technologies: ['MERN', 'PostgreSQL', 'Python', 'REST APIs'],
     industryUseCase: 'Great for companies replacing spreadsheets, disconnected tools, or legacy internal systems.',
-    cta: 'Design custom software',
+    cta: 'Start a Project',
     icon: 'software',
   },
 ]

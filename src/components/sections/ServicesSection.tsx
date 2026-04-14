@@ -68,66 +68,68 @@ const iconMap: Record<ServiceIcon, ComponentType<IconProps>> = {
 export function ServicesSection() {
   return (
     <section id="services" className="relative py-24 sm:py-28 lg:py-32">
-      <div className="pointer-events-none absolute inset-x-0 top-10 -z-10 mx-auto h-80 w-[50rem] max-w-full rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.12),rgba(139,92,246,0.08),transparent_74%)] dark:bg-[radial-gradient(circle,rgba(59,130,246,0.16),rgba(139,92,246,0.08),transparent_74%)] blur-3xl" />
+      <div className="absolute inset-x-0 top-12 -z-10 mx-auto h-72 w-[48rem] max-w-full rounded-full bg-[radial-gradient(circle,rgba(148,163,184,0.16),transparent_72%)] dark:bg-[radial-gradient(circle,rgba(56,189,248,0.08),transparent_72%)] blur-3xl" />
+
       <Container>
         <SectionHeading
           eyebrow="Enterprise Services"
-          title="Execution-focused digital services built around business outcomes, not just deliverables."
-          description="Each engagement is structured to reduce complexity, accelerate delivery, and create systems your team can actually scale with."
+          title="Structured digital services designed for reliable delivery and long-term scale."
+          description="Each engagement is shaped around product clarity, sound architecture, and execution standards teams can depend on."
           centered
         />
 
-        <div className="mt-14 grid gap-6 xl:grid-cols-2">
+        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {services.map((service, index) => {
             const Icon = iconMap[service.icon]
 
             return (
               <motion.article
                 key={service.title}
-                initial={{ opacity: 0, y: 28 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45, delay: index * 0.06 }}
-                whileHover={{ y: -8 }}
-                className="group rounded-[1.9rem] bg-[linear-gradient(135deg,rgba(59,130,246,0.26),rgba(139,92,246,0.22),rgba(255,255,255,0.7))] p-[1px] shadow-[0_24px_70px_rgba(148,163,184,0.22)] dark:bg-[linear-gradient(135deg,rgba(59,130,246,0.4),rgba(139,92,246,0.35),rgba(255,255,255,0.08))] dark:shadow-[0_24px_70px_rgba(2,11,20,0.3)]"
+                className="h-full"
               >
-                <div className="relative h-full rounded-[1.85rem] border border-slate-200/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(241,245,249,0.96))] p-7 transition duration-300 group-hover:border-brand-300/30 dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(10,17,28,0.94),rgba(16,19,35,0.92))] dark:group-hover:border-brand-200/20">
-                  <div className="absolute inset-0 rounded-[1.85rem] bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.08),transparent_32%)] opacity-0 transition duration-500 group-hover:opacity-100 dark:bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_32%)]" />
-                  <div className="relative">
-                    <div className="flex flex-wrap items-start justify-between gap-5">
-                      <div className="flex items-center gap-4">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-slate-200/80 bg-gradient-to-br from-brand-500/20 via-sky-400/16 to-violet-500/18 text-brand-700 shadow-lg shadow-slate-200/60 transition duration-300 group-hover:shadow-[0_0_28px_rgba(96,165,250,0.2)] dark:border-white/12 dark:from-brand-500/28 dark:via-sky-400/18 dark:to-violet-500/22 dark:text-brand-100 dark:shadow-brand-950/25 dark:group-hover:shadow-[0_0_28px_rgba(96,165,250,0.28)]">
-                          <Icon className="h-7 w-7" />
+                <div className="group flex h-full flex-col justify-between rounded-[1.75rem] border border-slate-200/80 bg-white/72 p-7 backdrop-blur-xl transition hover:border-slate-300 hover:bg-white/90 dark:border-white/10 dark:bg-white/4 dark:hover:border-white/20 dark:hover:bg-white/5">
+                  <div className="flex h-full flex-col">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex min-w-0 items-start gap-4">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-slate-200/80 bg-slate-50 text-slate-700 dark:border-white/10 dark:bg-white/6 dark:text-slate-200">
+                          <Icon className="h-6 w-6" />
                         </div>
-                        <div>
-                          <h3 className="text-2xl font-semibold text-slate-950 dark:text-white">
+
+                        <div className="min-w-0">
+                          <p className="text-xs font-medium uppercase tracking-[0.28em] text-slate-400 dark:text-slate-500">
+                            Enterprise Service
+                          </p>
+                          <h3 className="mt-2 text-lg font-semibold text-slate-950 dark:text-white">
                             {service.title}
                           </h3>
-                          <p className="mt-1 text-sm uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
-                            Enterprise delivery
-                          </p>
                         </div>
                       </div>
 
-                      <span className="rounded-full border border-slate-200/80 bg-white/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-700 dark:border-white/10 dark:bg-white/5 dark:text-brand-100">
-                        Outcome focused
+                      <span className="shrink-0 rounded-full border border-slate-200/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-slate-500 dark:border-white/10 dark:text-slate-400">
+                        Outcome Focused
                       </span>
                     </div>
 
-                    <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300">
-                      {service.description}
-                    </p>
+                    <div className="min-h-[112px] pt-6">
+                      <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                        {service.description}
+                      </p>
+                    </div>
 
-                    <div className="mt-8 grid gap-5 md:grid-cols-[1fr_1fr]">
-                      <div className="rounded-[1.3rem] border border-slate-200/80 bg-slate-50/90 p-5 dark:border-white/10 dark:bg-white/5">
-                        <p className="text-xs uppercase tracking-[0.26em] text-slate-500 dark:text-slate-400">
-                          Technologies used
+                    <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                      <div className="flex h-full flex-col rounded-[1.25rem] border border-slate-200/80 bg-slate-50/80 p-5 dark:border-white/10 dark:bg-white/5">
+                        <p className="text-xs font-medium uppercase tracking-[0.24em] text-slate-400 dark:text-slate-500">
+                          Technologies Used
                         </p>
-                        <div className="mt-4 flex flex-wrap gap-2">
+                        <div className="mt-4 flex flex-1 flex-wrap content-start gap-2">
                           {service.technologies.map((tech) => (
                             <span
                               key={tech}
-                              className="rounded-full border border-slate-200/80 bg-white px-3 py-1.5 text-xs font-medium text-slate-700 dark:border-white/10 dark:bg-slate-950/60 dark:text-slate-200"
+                              className="inline-flex items-center rounded-full border border-slate-200/80 px-3 py-1.5 text-xs font-medium text-slate-700 dark:border-white/10 dark:text-slate-200"
                             >
                               {tech}
                             </span>
@@ -135,24 +137,24 @@ export function ServicesSection() {
                         </div>
                       </div>
 
-                      <div className="rounded-[1.3rem] border border-slate-200/80 bg-slate-50/90 p-5 dark:border-white/10 dark:bg-white/5">
-                        <p className="text-xs uppercase tracking-[0.26em] text-slate-500 dark:text-slate-400">
-                          Industry use case
+                      <div className="flex h-full flex-col rounded-[1.25rem] border border-slate-200/80 bg-slate-50/80 p-5 dark:border-white/10 dark:bg-white/5">
+                        <p className="text-xs font-medium uppercase tracking-[0.24em] text-slate-400 dark:text-slate-500">
+                          Industry Use Case
                         </p>
-                        <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                        <p className="mt-4 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                           {service.industryUseCase}
                         </p>
                       </div>
                     </div>
+                  </div>
 
-                    <motion.a
+                  <div className="mt-8 pt-1">
+                    <a
                       href="#contact"
-                      whileHover={{ x: 4 }}
-                      className="mt-8 inline-flex items-center text-sm font-semibold text-brand-700 transition duration-300 group-hover:text-brand-900 dark:text-brand-100 dark:group-hover:text-white"
+                      className="inline-flex items-center text-sm font-medium text-slate-700 transition hover:text-slate-950 hover:underline dark:text-slate-300 dark:hover:text-white"
                     >
-                      {service.cta}
-                      <span className="ml-2 text-base">→</span>
-                    </motion.a>
+                      {service.cta} <span className="ml-1.5">-&gt;</span>
+                    </a>
                   </div>
                 </div>
               </motion.article>
