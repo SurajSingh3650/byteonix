@@ -57,7 +57,7 @@ export type ProcessStep = {
 export const company = {
   name: 'Byteonix',
   tagline: 'Your Trusted Technology Partner',
-  email: 'Suraj27singh2003@gmail.com',
+  email: 'byteonixsupport@byteonix.in',
   phone: '+91 78058 29124',
   location: 'bangalore ,India',
   address: 'Blueberry Appartment Near Nagawara Bridge, Thanisandra Main Road, HBR Layout 5th Block, Bangalore.',
